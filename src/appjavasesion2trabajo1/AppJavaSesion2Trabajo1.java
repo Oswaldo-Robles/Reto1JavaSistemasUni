@@ -1,20 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package appjavasesion2trabajo1;
 
-/**
- *
- * @author Usuario
- */
+import java.util.Scanner;
+
 public class AppJavaSesion2Trabajo1 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println(calculoFactorial(5));
+
     }
-    
+
+    public static double calculoFactorial(double n1) {
+
+        double resultadoFactorial = 1;
+        for (int i = 1; i <= n1; i++) {
+            resultadoFactorial = i*resultadoFactorial;
+        }
+
+        return resultadoFactorial;
+
+    }
+
 }
