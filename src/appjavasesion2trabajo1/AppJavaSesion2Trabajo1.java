@@ -1,7 +1,5 @@
 package appjavasesion2trabajo1;
 
-import java.util.Scanner;
-
 public class AppJavaSesion2Trabajo1 {
 
     public static void main(String[] args) {

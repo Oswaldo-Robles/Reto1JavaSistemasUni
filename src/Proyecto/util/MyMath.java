@@ -3,7 +3,7 @@ package Proyecto.util;
 /**
  * @author Oswaldo Robles
  */
-public class FormulasMatematicas {
+public class MyMath {
 
     public double calculoFactorial(double n1) {
         double acumulador = 1;
@@ -26,7 +26,6 @@ public class FormulasMatematicas {
             }
         }
         interacion = interacion + " = "+calculoFactorial(n1);
-        
         return interacion;
     }
 
