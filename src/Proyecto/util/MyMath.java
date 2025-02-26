@@ -22,7 +22,7 @@ public class MyMath {
             if(i==n1){
                 interacion+=i;
             }else{
-                interacion +=1+"*";
+                interacion +=i+"*";
             }
         }
         interacion = interacion + " = "+calculoFactorial(n1);
