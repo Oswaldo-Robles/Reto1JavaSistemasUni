@@ -189,18 +189,6 @@ public class CalculadoraView extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(104, 104, 104)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
@@ -210,7 +198,19 @@ public class CalculadoraView extends javax.swing.JFrame {
                         .addComponent(btnClear))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(240, 240, 240)
-                        .addComponent(btnCalcular)))
+                        .addComponent(btnCalcular))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(44, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -232,14 +232,16 @@ public class CalculadoraView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNum1)
-                    .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNum2)
-                    .addComponent(txtNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblNum1)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNum2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtNum2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCalcular)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -251,7 +253,7 @@ public class CalculadoraView extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnSalir)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pack();
@@ -267,7 +269,7 @@ public class CalculadoraView extends javax.swing.JFrame {
 
     private void rbnMcdMcmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnMcdMcmActionPerformed
         clear();
-        
+
         lblNum2.setVisible(true);
         txtNum2.setVisible(true);
     }//GEN-LAST:event_rbnMcdMcmActionPerformed
@@ -278,6 +280,7 @@ public class CalculadoraView extends javax.swing.JFrame {
 
     private void rbnFibonacciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnFibonacciActionPerformed
         clear();
+        lblNum1.setText("Posición en la secuencia de FIBONACCI");
     }//GEN-LAST:event_rbnFibonacciActionPerformed
 
     private void rbnNumeroPrimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbnNumeroPrimoActionPerformed
@@ -336,38 +339,14 @@ public class CalculadoraView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblNum1;
     private javax.swing.JLabel lblNum2;
-    private javax.swing.JRadioButton rbnAlumno;
-    private javax.swing.JRadioButton rbnAlumno1;
-    private javax.swing.JRadioButton rbnAlumno2;
-    private javax.swing.JRadioButton rbnAlumno3;
-    private javax.swing.JRadioButton rbnAlumno4;
-    private javax.swing.JRadioButton rbnAlumno5;
-    private javax.swing.JRadioButton rbnEmpleado;
-    private javax.swing.JRadioButton rbnEmpleado1;
-    private javax.swing.JRadioButton rbnEmpleado2;
-    private javax.swing.JRadioButton rbnEmpleado3;
-    private javax.swing.JRadioButton rbnEmpleado4;
-    private javax.swing.JRadioButton rbnEmpleado5;
     private javax.swing.JRadioButton rbnFactorial;
     private javax.swing.JRadioButton rbnFibonacci;
     private javax.swing.JRadioButton rbnMcdMcm;
     private javax.swing.JRadioButton rbnNumeroPrimo;
-    private javax.swing.JRadioButton rbnProfesor;
-    private javax.swing.JRadioButton rbnProfesor1;
-    private javax.swing.JRadioButton rbnProfesor2;
-    private javax.swing.JRadioButton rbnProfesor3;
-    private javax.swing.JRadioButton rbnProfesor4;
-    private javax.swing.JRadioButton rbnProfesor5;
     private javax.swing.JTextArea txtExplicacion;
     private javax.swing.JTextField txtNum1;
     private javax.swing.JTextField txtNum2;
@@ -380,6 +359,7 @@ public class CalculadoraView extends javax.swing.JFrame {
         txtNum2.setText("0.0");
         txtResultado.setText("");
         txtExplicacion.setText("");
+        lblNum1.setText("Ingrese el número 1=");
 
         lblNum2.setVisible(false);
         txtNum2.setVisible(false);
@@ -416,14 +396,13 @@ public class CalculadoraView extends javax.swing.JFrame {
             double n2 = Double.parseDouble(num2);
 
             if (rbnFactorial.isSelected()) {
-                txtResultado.setText("El resultado es: " + String.valueOf(math.calculoFactorial(Double.parseDouble(num1))));
-
+                txtResultado.setText("El resultado es: " + math.calculoFactorial(n1));
             } else if (rbnMcdMcm.isSelected()) {
-                txtResultado.setText("Metodo MCD MCM aun en proceso");
+                txtResultado.setText(math.McdyMcm(n1, n2));
             } else if (rbnFibonacci.isSelected()) {
-                txtResultado.setText("Metodo Fibonacci aun en proceso");
+                txtResultado.setText("El resultado es: " + math.calculoFibonacci(n1));
             } else if (rbnNumeroPrimo.isSelected()) {
-                txtResultado.setText("Metodo primo aun en proceso");
+                txtResultado.setText(math.primo(n1));
             }
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "Verifique que el número ingresado sea un número Valido", "Error", JOptionPane.ERROR_MESSAGE);
@@ -437,15 +416,21 @@ public class CalculadoraView extends javax.swing.JFrame {
 
     private void explicar() {
 
+        String num1 = txtNum1.getText().trim();
+        String num2 = txtNum2.getText().trim();
+
+        double n1 = Double.parseDouble(num1);
+        double n2 = Double.parseDouble(num2);
+
         if (rbnFactorial.isSelected()) {
-            txtExplicacion.setText(math.explicacionResultadoFactorial(Double.parseDouble(txtNum1.getText())));
+            txtExplicacion.setText(math.explicacionResultadoFactorial(n1));
 
         } else if (rbnMcdMcm.isSelected()) {
-
+            txtExplicacion.setText(math.explicacionResultadoMcdMcm(n1, n2));
         } else if (rbnFibonacci.isSelected()) {
-
+            txtExplicacion.setText(math.explicacionResultadoFibonacci(n1));
         } else if (rbnNumeroPrimo.isSelected()) {
-
+            txtExplicacion.setText(math.explicacionResultadoPrimo(n1));
         }
     }
 }
